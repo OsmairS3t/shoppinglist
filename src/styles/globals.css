@@ -1,5 +1,10 @@
 :root {
   --background: #000000;
+  --bg-header: #058ED9;
+  --bg-menu: #FFBC0A;
+  --bg-menu-hover: #e28800;
+  --bg-footer: #058ED9;
+  --bg-blockContent: #ffffff;
 }
 
 * {
