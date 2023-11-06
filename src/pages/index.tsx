@@ -7,6 +7,9 @@ import List from './screens/list'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  function toggleMenu() {
+  }
+
   return (
     <>
       <Head>
@@ -22,14 +25,15 @@ export default function Home() {
           <div className={styles.textHeader}>Lista</div>
         </div>
 
-        <div className={styles.page}>
-          <div className={styles.menu}>
-            <Link className={styles.itemMenu} href="/">Listar</Link>
-            <Link className={styles.itemMenu} href="/">Cadastrar</Link>
-            <Link className={styles.itemMenu} href="/">Imprimir</Link>
-            <Link className={styles.itemMenu} href="/">Comprar</Link>
-          </div>
+        <button className={styles.btnMobile} onClick={toggleMenu}>Menu</button>
+        <ul className={styles.menu}>
+          <li><Link href="/">Listar</Link></li>
+          <li><Link href="/">Cadastrar</Link></li>
+          <li><Link href="/">Imprimir</Link></li>
+          <li><Link href="/">Comprar</Link></li>
+        </ul>
 
+        <div className={styles.page}>
           <div className={styles.content}>
             <List />
           </div>

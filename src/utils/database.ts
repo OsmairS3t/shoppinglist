@@ -1,31 +1,31 @@
 export const Unit = [
-    { name: 'KG' },
-    { name: 'PACOTE(S)' },
-    { name: 'SACA(S)' },
-    { name: 'UNIDADE(S)' },
-    { name: 'LITRO(S)' },
-    { name: 'BARRA(S)' },
+    { name: 'Kg' },
+    { name: 'Pacote(s)' },
+    { name: 'Saca(s)' },
+    { name: 'Unidade(s)' },
+    { name: 'Litro(s)' },
+    { name: 'Barra(s)' },
 ]
 
 export const Type = [
-    { name: 'BEBIDAS' },
-    { name: 'CARNES' },
-    { name: 'FRUTOS DO MAR' },
-    { name: 'OLEOS' },
-    { name: 'TEMPEROS' },
+    { name: 'Bebidas' },
+    { name: 'Carnes' },
+    { name: 'Frutos do Mar' },
+    { name: 'Óleos' },
+    { name: 'Temperos' },
 ]
 
 export const Product = [
     {
         id: 'a',
         name: 'Filé Mion',
-        unit: 'UNIDADE(S)',
+        unit: 'Unidade(s)',
         price: 45
     },
     {
         id: 'b',
         name: 'Colchão mole',
-        unit: 'KG',
+        unit: 'Kg',
         price: 25
     },
 ]
@@ -33,11 +33,11 @@ export const Product = [
 export const Buy = [
     {
         id: 'aa',
-        type: 'CARNES',
+        type: 'Carnes',
         product: {
             id: 'a',
             name: 'Filé Mion',
-            unit: 'UNIDADE(S)',
+            unit: 'Unidade(s)',
             price: 45
         },
         amount: 5,
@@ -45,11 +45,11 @@ export const Buy = [
     },
     {
         id: 'ab',
-        type: 'CARNES',
+        type: 'Carnes',
         product: {
             id: 'b',
             name: 'Colchão mole',
-            unit: 'KG',
+            unit: 'Kg',
             price: 25
         },
         amount: 2,

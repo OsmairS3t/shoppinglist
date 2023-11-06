@@ -6,24 +6,27 @@ import styles from '../../styles/List.module.css';
 
 export default function List() {
     const [buy, setBuy] = useState<IBuy[]>(Buy);
+    const [list, setList] = useState<IBuy[]>([]);
 
     return (
         <div className={styles.container}>
             <div className={styles.title}>Lista de Compras</div>
-            {/* {
+            {
                 Type.map(t => (
-                    const listBuy = buy.filter(b => b.type === t.name)
-                    listBuy && <div>{t.name}</div>
+                    <div key={t.name} className={styles.type}>{t.name}
+                        {
+                            buy.filter(bu => bu.type === t.name).map(b => (
+                                <div className={styles.product} key={b.id}>
+                                    <div><input id={b.id} type='checkbox' /></div>
+                                    <label htmlFor={b.id}>
+                                        {b.product.name} {b.amount} ({b.product.unit})
+                                    </label>
+                                </div>
+                            ))
+                        }
+                    </div>
                 ))
-            } */}
-
-            {buy.map(b => (
-                <div className={styles.product}>
-                    <div><input type='checkbox' /></div>
-                    <div>{b.product.name}</div>
-                    <div>{b.amount} ({b.product.unit})</div>
-                </div>
-            ))}
+            }
         </div>
     )
 
