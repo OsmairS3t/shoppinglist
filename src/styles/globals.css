@@ -1,11 +1,13 @@
 :root {
   --background: #000000;
   --bg-header: #058ED9;
+  --bg-header-light: #aadbf5;
   --bg-menu: #FFBC0A;
   --bg-menu-hover: #e28800;
   --bg-footer: #058ED9;
   --bg-blockContent: #ffffff;
-  --text-default: '#000000';
+  --text-default: #000000;
+  --text-link: #6e6e6e;
 }
 
 * {
