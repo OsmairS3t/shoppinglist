@@ -11,4 +11,5 @@ export const Content = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: ${({theme }) =>theme.COLORS.BLACK};
 `
