@@ -9,14 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.2",
     "@types/node": "20.8.9",
     "@types/react": "18.2.33",
     "@types/react-dom": "18.2.14",
     "next": "14.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.48.2",
     "styled-components": "^6.1.0",
     "typescript": "5.2.2",
-    "yarn": "^1.22.19"
+    "yarn": "^1.22.19",
+    "zod": "^3.22.4"
   }
 }

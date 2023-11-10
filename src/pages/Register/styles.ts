@@ -14,3 +14,47 @@ export const Title = styled.div`
     text-transform: uppercase;
     font-size: 1.2rem;
 `;
+
+export const GroupInput = styled.div`
+    padding: 10px;
+    margin: 4px 0px;
+    display: flex;
+    flex-direction: column;
+`;
+
+export const LabelInput = styled.label`
+    color: black;
+    font-size: 14px;
+`;
+
+export const InputForm = styled.input`
+    padding: 10px;
+    width: 250px;
+    margin: 4px 0px;
+    font-size: 14px;
+`;
+
+export const ButtonSubmit = styled.button`
+    padding: 10px;
+    width: 250px;
+    border-radius: 4px;
+    background-color: silver;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+`;
+
+export const Error = styled.span`
+    color: red;
+`;
+
+export const ButtonIngredient = styled.button`
+    padding: 10px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: green;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+`;
+
