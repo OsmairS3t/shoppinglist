@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 10.37rem);
+    height: calc(100vh - 9.62rem);
 `;
 
 export const Content = styled.div`
@@ -11,5 +11,6 @@ export const Content = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: ${({theme }) =>theme.COLORS.BLACK};
+    background-color: ${({theme }) =>theme.COLORS.WHITE};
+    padding-top: 1.5rem;
 `

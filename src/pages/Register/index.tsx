@@ -55,6 +55,10 @@ export default function Register() {
         append({ description: '', price: 0 })
     }
 
+    function RemoveIngredient() {
+        console.log('Espere')
+    }
+
     return (
         <Container>
             <Title>Cadastrar Produto</Title>
@@ -77,6 +81,7 @@ export default function Register() {
                 <GroupInput>
                     <LabelInput htmlFor=''>Ingreditents:</LabelInput>
                     <ButtonIngredient type='button' onClick={AddNewIngredient}>+ Ing</ButtonIngredient>
+                    <ButtonIngredient type='button' onClick={RemoveIngredient}>- Ing</ButtonIngredient>
                     {fields.map((field, index) => {
                         return (
                             <GroupInput key={field.id}>

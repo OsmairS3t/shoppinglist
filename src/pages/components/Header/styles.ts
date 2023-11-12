@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 
+type MenuProps = {
+    isOpen: boolean;
+}
+
 export const Container = styled.div`
     width: 100%;
-    height: 7.25rem;
+    height: 6.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -23,8 +27,13 @@ export const ContentHeader = styled.div`
 
 export const ContainerMenu = styled.div`
     gap: 8px;
-    padding: 0rem 2rem;
-    background-color: var(--bg-header-light);
+    padding: 0rem 1.5rem;
+    background-color: #aadbf5;
+
+    @media(max-width: 768px){
+        z-index: 999;
+        padding: 0;
+    }
 `;
 
 export const BtnMobile = styled.button`
@@ -37,9 +46,13 @@ export const BtnMobile = styled.button`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    @media(max-width: 768px) {
+        display: flex;
+    }
 `;
 
-export const Hamburguer = styled.ul`
+export const Hamburguer = styled.span`
     width: 20px;
     border-top: 2px solid black;
 
@@ -55,21 +68,49 @@ export const Hamburguer = styled.ul`
     }
 `;
 
-export const Menu = styled.ul`
+export const Menu = styled.ul<MenuProps>`
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     list-style: none;
+    overflow: hidden;
+
+    li a{
+        height: 40px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-weight: bold;
+        color: ${({theme}) => theme.COLORS.TEXT_LINK};
+    }
+
+    li a:hover {
+        cursor: pointer;
+        font-weight: bold;
+        color: ${({theme}) => theme.COLORS.TEXT_DEFAULT};
+        background-color: white;
+    }
+
+    @media(max-width: 768px) {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: calc(100vh - 9.65rem);
+        display: ${({ isOpen }) => isOpen ? 'none': 'block'};
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    li a {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
-export const ItemMenu = styled.li`
-    height: 40px;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-weight: bold;
-`;
 

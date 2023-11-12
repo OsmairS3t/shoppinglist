@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
-import styles from './styles.module.css';
 import Link from 'next/link';
+
+import {
+    Container,
+    ContentHeader,
+    ContainerMenu,
+    BtnMobile,
+    Hamburguer,
+    Menu
+} from './styles';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -9,23 +17,23 @@ export default function Header() {
     }
 
     return (
-        <div className={styles.header}>
-            <div className={styles.contentHeader}>
+        <Container>
+            <ContentHeader>
                 <span>Empresa</span>
                 <span>Lista</span>
-            </div>
-            <div className={styles.containerMenu}>
-                <button className={styles.btnMobile} onClick={ToggleMenu}>
-                    <span className={styles.hamburger}></span>
-                </button>
-                <ul className={styles.menu}>
-                    <li><Link href='/Home' passHref>Home</Link></li>
-                    <li><Link href='/List' passHref>Listar</Link></li>
-                    <li><Link href="/Register" passHref>Cadastrar</Link></li>
-                    <li><Link href="/Print" passHref>Imprimir</Link></li>
-                    <li><Link href="/Buy" passHref>Comprar</Link></li>
-                </ul>
-            </div>
-        </div>
+            </ContentHeader>
+            <ContainerMenu>
+                <BtnMobile onClick={ToggleMenu}>
+                    <Hamburguer></Hamburguer>
+                </BtnMobile>
+                <Menu isOpen={isOpen}>
+                    <li><Link onClick={ToggleMenu} href='/' passHref>Home</Link></li>
+                    <li><Link onClick={ToggleMenu} href='/List' passHref>Listar</Link></li>
+                    <li><Link onClick={ToggleMenu} href="/Register" passHref>Cadastrar</Link></li>
+                    <li><Link onClick={ToggleMenu} href="/Print" passHref>Imprimir</Link></li>
+                    <li><Link onClick={ToggleMenu} href="/Buy" passHref>Comprar</Link></li>
+                </Menu>
+            </ContainerMenu>
+        </Container>
     )
 }

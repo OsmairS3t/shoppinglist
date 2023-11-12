@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 10.37rem);
+    height: calc(100vh - 9.62rem);
 `;
 
 export const Title = styled.div`

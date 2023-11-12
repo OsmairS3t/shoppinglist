@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
-import { Container, Content } from './styles'
+import { Container, Content } from './Home/styles'
 
 export default function Home() {
 
