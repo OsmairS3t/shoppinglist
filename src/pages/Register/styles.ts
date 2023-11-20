@@ -1,9 +1,15 @@
 import styled from 'styled-components'
 
+type InputFormProps = {
+    size: number;
+}
+
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 9.62rem);
+    height: calc(100vh - 9.60rem);
+    overflow: auto;
+    padding: 0.5rem;
 `;
 
 export const Title = styled.div`
@@ -22,6 +28,13 @@ export const GroupInput = styled.div`
     flex-direction: column;
 `;
 
+export const GroupInput1 = styled.div`
+    padding: 10px;
+    margin: 4px 0px;
+    display: flex;
+    flex-direction: row;
+`;
+
 export const LabelInput = styled.label`
     color: black;
     font-size: 14px;
@@ -30,6 +43,13 @@ export const LabelInput = styled.label`
 export const InputForm = styled.input`
     padding: 10px;
     width: 250px;
+    margin: 4px 0px;
+    font-size: 14px;
+`;
+
+export const InputForm1 = styled.input<InputFormProps>`
+    padding: 10px;
+    width: ${({ size })=>size}px;
     margin: 4px 0px;
     font-size: 14px;
 `;

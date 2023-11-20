@@ -3,7 +3,18 @@ import { useForm, useFieldArray } from "react-hook-form"
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 
-import { Container, Title, GroupInput, LabelInput, InputForm, ButtonSubmit, Error, ButtonIngredient } from './styles';
+import { 
+    Container, 
+    Title, 
+    GroupInput, 
+    GroupInput1,
+    LabelInput, 
+    InputForm, 
+    InputForm1, 
+    ButtonSubmit, 
+    Error, 
+    ButtonIngredient 
+} from './styles';
 
 // zod => https://www.youtube.com/watch?v=XSbMSSdGSdg&t=1415s
 // type FormData = {
@@ -84,10 +95,10 @@ export default function Register() {
                     <ButtonIngredient type='button' onClick={RemoveIngredient}>- Ing</ButtonIngredient>
                     {fields.map((field, index) => {
                         return (
-                            <GroupInput key={field.id}>
-                                <InputForm type="text" id='description' {...register(`ingredients.${index}.description`)} />
-                                <InputForm type="number" id='price' {...register(`ingredients.${index}.price`)} />
-                            </GroupInput>
+                            <GroupInput1 key={field.id}>
+                                <InputForm1 size={100} type="text" id='description' {...register(`ingredients.${index}.description`)} />
+                                <InputForm size={50} type="number" id='price' {...register(`ingredients.${index}.price`)} />
+                            </GroupInput1>
                         )
                     })}
                 </GroupInput>
